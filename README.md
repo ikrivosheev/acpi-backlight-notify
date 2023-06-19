@@ -1,6 +1,6 @@
 # acpi-backlight-notify
 
-<a href="https://aur.archlinux.org/packages/xbacklight-notify/"><img src="https://raw.githubusercontent.com/themix-project/oomox/master/packaging/download_aur.png" height="54"></a>
+<a href="https://aur.archlinux.org/packages/acpi-backlight-notify"><img src="https://raw.githubusercontent.com/themix-project/oomox/master/packaging/download_aur.png" height="54"></a>
 
 ### Description
 ACPI backlight notification daemon
