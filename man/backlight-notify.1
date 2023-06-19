@@ -1,0 +1,32 @@
+.TH "backlight-notify" "1" "16 June 2023" "backlight-notify(1)" "User manual"
+
+.SH NAME
+
+backlight-notify \(em ACPI Backlight notification
+
+.SH SYNOPSIS
+
+.PP
+\fBbacklight-notify\fR [\fBOPTIONS\fR]
+
+.SH DESCRIPTION
+
+.PP
+\fBbacklight-notify\fR is backlight notification. It get information from ACPI and send notification using libnotify. 
+
+.SH OPTIONS
+
+.IP "\fB-h\fR, \fB--help\fR" 5
+Show help options
+.IP "\fB-d\fR, \fB--debug\fR" 5
+Enable debug information
+.IP "\fB-t\fR, \fB--timeout\fR" 5
+Notification timeout in seconds (-1 - default notification timeout, 0 - notification never expires)
+.SH EXAMPLES
+
+.EX
+
+.TP
+backlight
+.EE
+
