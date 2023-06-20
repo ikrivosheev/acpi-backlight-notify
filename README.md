@@ -17,6 +17,7 @@ backlight-notify [OPTION…]
 * `-h`, `--help` - Show help options
 
 #### Application Options:
+* `-b`, `--backlight` - Folder name in `/sys/class/backlight/<backlight>` (**required**)
 * `-d`, `--debug` - Enable/disable debug information
 * `-t`, `--timeout` - Notification timeout in seconds (-1 - default notification timeout, 0 - notification never expires)
 
