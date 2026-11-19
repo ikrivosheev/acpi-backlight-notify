@@ -1,8 +1,8 @@
-.TH "backlight-notify" "1" "16 June 2023" "backlight-notify(1)" "User manual"
+.TH "backlight-notify" "1" "19 November 2026" "backlight-notify 1.0.0" "User manual"
 
 .SH NAME
 
-backlight-notify \(em ACPI Backlight notification
+backlight-notify \(em ACPI backlight notification daemon
 
 .SH SYNOPSIS
 
@@ -12,23 +12,28 @@ backlight-notify \(em ACPI Backlight notification
 .SH DESCRIPTION
 
 .PP
-\fBbacklight-notify\fR is backlight notification. It get information from ACPI and send notification using libnotify. 
+\fBbacklight-notify\fR is a backlight notification daemon. It gets information from ACPI and sends notifications using libnotify.
 
 .SH OPTIONS
 
 .IP "\fB-h\fR, \fB--help\fR" 5
 Show help options
-.IP "\fB-b\fR, \fB--backlight\fR"
-Folder name in /sys/class/backlight/<backlight>
+.IP "\fB-b\fR, \fB--backlight\fR" 5
+Folder name in /sys/class/backlight/<backlight> (required)
 .IP "\fB-d\fR, \fB--debug\fR" 5
 Enable debug information
 .IP "\fB-t\fR, \fB--timeout\fR" 5
 Notification timeout in seconds (-1 - default notification timeout, 0 - notification never expires)
+
 .SH EXAMPLES
 
-.EX
-
 .TP
-backlight
-.EE
+\fBbacklight-notify\fR \fB-b\fR intel_backlight
+Show notifications for the \fIintel_backlight\fR device.
+.TP
+\fBbacklight-notify\fR \fB-b\fR intel_backlight \fB-t\fR 2
+Show notifications that expire after 2 seconds.
 
+.SH AUTHOR
+
+.Ivan Krivosheev <py.krivosheev@gmail.com>

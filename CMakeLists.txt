@@ -1,16 +1,18 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(backlight-notify VERSION 1.0.0)
+
+include(GNUInstallDirs)
 
 add_subdirectory(src)
 
 install(
     TARGETS ${PROJECT_NAME}
-    DESTINATION bin
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-install(    
+install(
     FILES "man/backlight-notify.1"
-    DESTINATION share/man/man1
+    DESTINATION ${CMAKE_INSTALL_MANDIR}/man1
 )
 
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
@@ -25,7 +27,5 @@ set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 
 set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
-set(CPACK_DEB_COMPONENT_INSTALL YES)
 set(CPACK_GENERATOR "DEB")
 include(CPack)
-
